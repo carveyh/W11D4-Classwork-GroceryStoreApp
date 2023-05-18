@@ -15,6 +15,7 @@ export function populateProduce(){
 
 // Reducer
 export default function produceReducer(state = {}, action) {
+	Object.freeze(state);
 	switch(action.type) {
 		case POPULATE:
 			let newState = {};
@@ -26,4 +27,3 @@ export default function produceReducer(state = {}, action) {
 			return state;
 	}
 }
-
